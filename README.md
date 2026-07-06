@@ -3,5 +3,5 @@
 </h1>
 
 <p align="center">
-  Sistema inteligente para gerenciamento de ...
+  Jogo da velha em Java com algoritmo de decisão desenvolvido do zero para a "Máquina", simulando um comportamento inteligente.
 </p>
