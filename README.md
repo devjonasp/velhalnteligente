@@ -8,7 +8,7 @@ Jogo da Velha com algoritmo de decisão desenvolvido do zero para a máquina, si
 
 Consolidar os conhecimentos adquiridos ao longo do curso *Java: Primeiros Passos – Lógica de Programação e Algoritmos*, aplicando na prática os conceitos estudados por meio do desenvolvimento de um algoritmo que permite o usuário jogar contra uma máquina.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologia Utilizada
 
 - Java 17
 
