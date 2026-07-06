@@ -3,5 +3,7 @@
 </h1>
 
 <p align="center">
-  Jogo da velha em Java com algoritmo de decisão desenvolvido do zero para a "Máquina", simulando um comportamento inteligente.
+  Jogo da velha com algoritmo de decisão desenvolvido do zero para a "Máquina", simulando um comportamento inteligente.
 </p>
+
+## Objetivo
