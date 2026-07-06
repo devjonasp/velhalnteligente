@@ -26,27 +26,25 @@ public class Main {
 			System.out.println("BEM VINDO(A) À VelhaInteligente!");
 			System.out.println();
 			System.out.println("      MENU");
-			System.out.println("=================");
+			System.out.println("================");
 			System.out.println("[1] JOGAR AGORA");
-			System.out.println("[2] INFORMAÇÕES");
+			System.out.println("[2] COMO JOGAR");
 			System.out.println("[3] SAIR DO JOGO");
-			System.out.println("=================");
+			System.out.println("================");
 			System.out.println();
+			System.out.print("SELECIONE UMA OPÇÃO:");
 
 			do {
 				try {
-					System.out.print("SELECIONE UMA OPÇÃO:");
 					escolha = sc.nextInt();
-
 					while (escolha < 1 || escolha > 3) {
-						System.err.print("OPÇAO INVÁLIDA!");
-						System.out.print(" ESCOLHA UMA POSIÇÃO DISPONÍVEL:");
+						System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 						escolha = sc.nextInt();
 					}
 					jogadaValida = true;
 
 				} catch (InputMismatchException e) {
-					System.err.print("OPÇAO INVÁLIDA! ");
+					System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 					sc.next();
 					jogadaValida = false;
 				}
@@ -92,7 +90,6 @@ public class Main {
 						}
 						System.out.println();
 					}
-
 					for (jogadas = 0; jogadas < 9; jogadas++) {
 						if (repetir == true) {
 							break;
@@ -121,8 +118,7 @@ public class Main {
 									}
 								}
 								if (!jogadaValida) {
-									System.err.print("OPÇAO INVÁLIDA!");
-									System.out.print(" ESCOLHA UMA POSIÇÃO DISPONÍVEL:");
+									System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 									jogar = sc.next();
 								}
 							} while (!jogadaValida);
@@ -160,7 +156,6 @@ public class Main {
 									break;
 								}
 							}
-
 							if (!usuarioVenceu) {
 								do {
 									for (int i = 0; i < 3; i++) {
@@ -219,9 +214,8 @@ public class Main {
 									temp1 = 0;
 								}
 							}
-
 							if (usuarioVenceu) {
-								System.out.println("VOCE VENCEU A PARTIDA!");
+								System.out.println("VOCE VENCEU A PARTIDA!!!");
 								System.out.println();
 								break;
 							}
@@ -249,7 +243,6 @@ public class Main {
 									temp2 = 0;
 								}
 							}
-
 							if (!maquinaVenceu) {
 								do {
 									for (int i = 0; i < 3; i++) {
@@ -310,7 +303,6 @@ public class Main {
 									temp2 = 0;
 								}
 							}
-
 							if (!maquinaVenceu) {
 
 								for (int i = 0; i < 3; i++) {
@@ -334,7 +326,6 @@ public class Main {
 													temp1 = 0;
 													temp2 = 0;
 												}
-
 											}
 										}
 									}
@@ -346,7 +337,7 @@ public class Main {
 							if (maquinaVenceu) {
 								System.out.println();
 								System.out.println("===============");
-								System.out.println(" VEZ DA MÁQUINA 1");
+								System.out.println(" VEZ DA MÁQUINA");
 								System.out.println("===============");
 								System.out.println();
 								System.out.println(" TABULEIRO: ");
@@ -386,7 +377,6 @@ public class Main {
 										break;
 									}
 								}
-
 								if (!bloqueio) {
 									for (int i = 0; i < 3; i++) {
 										for (int j = 0; j < 3; j++) {
@@ -419,7 +409,7 @@ public class Main {
 								}
 								if (bloqueio) {
 									System.out.println("===============");
-									System.out.println(" VEZ DA MÁQUINA 2");
+									System.out.println(" VEZ DA MÁQUINA");
 									System.out.println("===============");
 									System.out.println();
 									for (int i = 0; i < 3; i++) {
@@ -435,7 +425,7 @@ public class Main {
 								} else {
 									System.out.println();
 									System.out.println("================");
-									System.out.println(" VEZ DA MÁQUINA 3");
+									System.out.println(" VEZ DA MÁQUINA");
 									System.out.println("================");
 									System.out.println();
 									System.out.println(" TABULEIRO: ");
@@ -469,7 +459,6 @@ public class Main {
 									}
 								}
 							}
-
 							if (maquinaVenceu) {
 								System.out.println();
 								System.out.println("MÁQUINA VENCEU A PARTIDA!");
@@ -485,26 +474,23 @@ public class Main {
 							break;
 						}
 					}
-					// JOGO }
-
 					if (empate || maquinaVenceu || usuarioVenceu) {
 						System.out.println("1-JOGAR NOVAMENTE | 2-INFORMAÇÕES | 3-SAIR DO JOGO");
-
+						System.out.println();
+						System.out.print("SELECIONE UMA OPÇÃO:");
 						do {
 							try {
-								System.out.print("SELECIONE UMA OPÇÃO:");
 								escolha = sc.nextInt();
 								System.out.println();
 
 								while (escolha < 1 || escolha > 3) {
-									System.err.print("OPÇAO INVÁLIDA!");
-									System.out.print(" ESCOLHA UMA POSIÇÃO DISPONÍVEL:");
+									System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 									escolha = sc.nextInt();
 								}
 								jogadaValida = true;
 
 							} catch (InputMismatchException e) {
-								System.err.print("OPÇAO INVÁLIDA! ");
+								System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 								sc.next();
 								jogadaValida = false;
 							}
@@ -520,48 +506,45 @@ public class Main {
 					System.out.println("1. MAQUINA-O");
 					System.out.println("   JOGADOR-X");
 					System.out.println();
-					System.out.println(" 2. JOGADOR COMEÇA JOGANDO.");
+					System.out.println("2. JOGADOR COMEÇA JOGANDO");
 					System.out.println();
-					System.out.println(" O | 2 | 3");
-					System.out.println(" 4 | 5 | 6");
-					System.out.println(" 7 | 8 | 9");
-					System.out.println();
-					System.out.println(" O | 2 | 3");
+					System.out.println(" 1 | 2 | 3");
 					System.out.println(" 4 | 5 | 6    <- USÚARIO DIGITA O NÚMERO DA POSIÇÃO QUE DESEJA JOGAR");
-					System.out.println(" 7 | 8 | 9       EX: A ESCOLHA FOI O NÚMERO 2");
+					System.out.println(" 7 | 8 | 9");
 					System.out.println();
-					System.out.println(" O | X | 3");
+					System.out.println(" 1 | X | 3");
+					System.out.println(" 4 | 5 | 6    <- A ESCOLHA FOI O NÚMERO 2");
+					System.out.println(" 7 | 8 | 9");
+					System.out.println();
+					System.out.println(" O | X | 3    <- MÁQUINA JOGA AUTOMATICAMENTE");
 					System.out.println(" 4 | 5 | 6");
 					System.out.println(" 7 | 8 | 9");
 					System.out.println();
-					System.out.println(" O | X | O    <- MÁQUINA JOGA AUTOMATICAMENTE");
-					System.out.println(" 4 | 5 | 6");
-					System.out.println(" 7 | 8 | 9");
-					System.out.println();
-					System.out.println(" 3. VENCE QUEM CONSEGUIR 3 SÍMBOLOS IGUAIS:");
+					System.out.println("3. VENCE QUEM CONSEGUIR 3 SÍMBOLOS IGUAIS:");
 					System.out.println("    LINHA, COLUNA OU DIAGONAL.");
 					System.out.println();
-					System.out.println(" 4. ENCHER O TABULEIRO = EMPATE");
+					System.out.println("4. ENCHER O TABULEIRO = EMPATE");
 					System.out.println();
 					System.out.println("===========================================================");
 					System.out.println();
 					System.out.println("[1] JOGAR AGORA");
 					System.out.println("[2] SAIR DO JOGO");
 					System.out.println();
+					System.out.print("SELECIONE UMA OPÇÃO:");
 
 					do {
 						try {
-							System.out.print("SELECIONE UMA OPÇÃO:");
+
 							escolha = sc.nextInt();
 
 							while (escolha < 1 || escolha > 2) {
-								System.err.print("OPÇAO INVÁLIDA! SELECIONE UMA OPÇÃO:");
+								System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 								escolha = sc.nextInt();
 							}
 							jogadaValida = true;
 
 						} catch (InputMismatchException e) {
-							System.err.print("OPÇAO INVÁLIDA! ");
+							System.err.print("OPÇAO INVÁLIDA! ESCOLHA UMA POSIÇÃO VÁLIDA:");
 							sc.next();
 							jogadaValida = false;
 						}
@@ -571,15 +554,14 @@ public class Main {
 						repetir = true;
 					} else {
 						System.out.println();
-						System.out.print("FIM DE JOGO");
+						System.out.print("FIM DE JOGO :)");
 
 						sc.close();
 						return;
 					}
 				}
-				// SAIR DO JOGO
 				if (escolha == 3) {
-					System.out.print("FIM DE JOGO");
+					System.out.print("FIM DE JOGO :)");
 
 					sc.close();
 					return;
